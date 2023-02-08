@@ -1,17 +1,14 @@
 # opencv-object-recognition
 
-Proposed by @JustKiNG#7390 on discord
+**Goal: To create a drone that can recognize your hand signals and move accordingly. This is mainly to learn a lot about AI.**
 
-Goal: to use a camera (from laptop or outside source) to identify objects.
+(If the drone with regards to budget doesn’t work out, we can attempt to change computer volume with hand signals).
 
-https://opencv-java-tutorials.readthedocs.io/en/latest/
+_How? – In python_
+-	Learn about Keras in tensorflow; find an AI model that would work for our project.
+    -	Learn what AI models are.
+    -	Learn how to create a model in python.
+    -	Learn how to import our dataset into this model with formatted data.
+        -	Formatted Data – using opencv to connect our camera with the data that Kaggle provides. Check #opencv-object-recognition. A lot of image processing.
+-	Learn how to use opencv to view the contents of the camera.
 
-Ideas: 
-Traffic pathing: Could attach camera onto front dash and track traffic lights. patterns etc. and determine the best route to take based on past data.
-
-Hand tracking:
-Maybe an intro to some stuff into VR and AR 
-
-Motion controls:
-for dorm lamp, with a smart light.
-Start out with laptop camera first, with a gesture or static pose, then move onto separate camera mounted somewhere where it can see door way.
