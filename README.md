@@ -1,4 +1,6 @@
-# opencv-object-recognition
+# Project Outline (Done on 02-03-2023)
+
+## opencv-object-recognition
 
 **Goal: To create a drone that can recognize your hand signals and move accordingly. This is mainly to learn a lot about AI.**
 
