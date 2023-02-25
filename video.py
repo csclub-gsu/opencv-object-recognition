@@ -11,6 +11,12 @@ def render(model):
     while True:
         ret, frame = cam_object.read()
 
+        ### ISSUE 3 START - Use this area to create the camera transformations to match the camera quality of the drone ###
+
+
+
+        ### ISSUE 3 END ###
+
         recognized_objects = model(np.asarray(frame))  # converts image into array
 
         # drawing rects from recognized_objects
