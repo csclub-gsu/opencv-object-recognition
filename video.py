@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+import math
 
 def render(model):
     rect_color = (0, 255, 255)
@@ -12,8 +13,15 @@ def render(model):
         ret, frame = cam_object.read()
 
         ### ISSUE 3 START - Use this area to create the camera transformations to match the camera quality of the drone ###
-
-
+        
+         # Either (set the camera's resolution to 720p)
+        cam_object.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
+        cam_object.set(cv2.CAP_PROP_FRAME_HEIGHT, 780)
+        
+        # Or (adjust the focal length of the camera | tello's fov = 82.6, tello's width = 1280)
+        width = int(cam_object.get(cv2.CAP_PROP_FRAME_WIDTH))
+        desired_focal_length = width / (2 * math.tan(math.radians(82.6 * (1280 / width)) / 2))
+        cam_object.set(cv2.CAP_PROP_FOCUS, desired_focal_length)
 
         ### ISSUE 3 END ###
 
