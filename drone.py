@@ -11,23 +11,24 @@ tello.connect()
 
 def move():
     if keyboard.is_pressed('w'):
-        tello.forward(20)
+        tello.move_forward(20)
     elif keyboard.is_pressed('s'):
-        tello.back(20)
+        tello.move_back(20)
     elif keyboard.is_pressed('a'):
-        tello.left(20)
+        tello.move_left(20)
     elif keyboard.is_pressed('d'):
-        tello.right(20)
+        tello.move_right(20)
     elif keyboard.is_pressed("space"):
-        tello.up(20)
+        tello.move_up(20)
     elif keyboard.is_pressed("shift"):
-        tello.down(20)
+        tello.move_down(20)
     elif keyboard.is_pressed(","):
-        tello.ccw(1)
+        tello.rotate_counter_clockwise(1)
     elif keyboard.is_pressed("."):
-        tello.cw(1)
+        tello.rotate_clockwise(1)
     else:
-        tello.stop()
+        #tello.stop()
+        pass
 
 while True:
     # senses if keyboard letters are pressed and does tello's takeoff, land, or completely stop all motors
