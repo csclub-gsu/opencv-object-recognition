@@ -16,7 +16,7 @@ def render(model):
         
          # Either (set the camera's resolution to 720p)
         cam_object.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
-        cam_object.set(cv2.CAP_PROP_FRAME_HEIGHT, 780)
+        cam_object.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
         
         # Or (adjust the focal length of the camera | tello's fov = 82.6, tello's width = 1280)
         width = int(cam_object.get(cv2.CAP_PROP_FRAME_WIDTH))
