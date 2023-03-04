@@ -5,7 +5,7 @@ import keyboard
 tello = Tello()
 tello.connect()
 
-speed = 30 #speed in cm/s
+speed = 100 #speed in cm/s
 
 # test of how the send rc control works
 # need to test out if the drone moves with these commands, or completely fails.
@@ -27,27 +27,36 @@ while True:
     yVal=0
 
     #list of if seeing if the keys are pressed and then changing the value 
+    
+    #Forwards
     if keyboard.is_pressed('w'):
         fbVal = speed
     
+    #Left
     if keyboard.is_pressed('a'):
         lrVal = -(speed)
 
+    #Backwards
     if keyboard.is_pressed('s'):
         fbVal = -(speed)
 
+    #Right
     if keyboard.is_pressed('d'):
         lrVal = speed
 
+    #Up
     if keyboard.is_pressed('space'):
         udVal = speed
     
+    #Down
     if keyboard.is_pressed('shift'):
         udVal = -(speed)
 
+    #Yaw: counterclockwise
     if keyboard.is_pressed(','):
         yVal = -(speed)
 
+    #Yaw: clockwise
     if keyboard.is_pressed('.'):
         yVal = speed
 
